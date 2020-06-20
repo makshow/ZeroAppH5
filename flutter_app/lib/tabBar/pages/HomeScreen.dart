@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Search.dart';
 import 'package:date_format/date_format.dart';
+import 'package:flutter_cupertino_date_picker/flutter_cupertino_date_picker.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -81,24 +82,72 @@ class HomePageApp extends StatefulWidget {
   _HomePageAppState createState() => _HomePageAppState();
 }
 
-class _HomePageAppState extends State<HomePageApp> {
 
+const String MIN_DATETIME = '2010-05-12';
+const String MAX_DATETIME = '2021-11-25';
+const String INIT_DATETIME = '2019-05-17';
+
+class _HomePageAppState extends State<HomePageApp> {
   // String crunttDate = "2020-6-20";
 
   bool flag = true;
   DateTime _nowDate = DateTime.now();
 
-  _showTimerPicker(){
-     showTimePicker(
-       context: context, 
-       initialTime: TimeOfDay(hour: 12, minute: 40))//初始化时间
-       .then((result) => {
-             print("RaisedButton== 点击按钮跳转 ${result.format(context)}")
-       });
+ _cupertinoTimerPicker(){
+//     DatePicker.showDatePicker(
+//   pickerTheme: DateTimePickerTheme(
+//     showTitle: true,
+//     confirm: Text('custom Done', style: TextStyle(color: Colors.red)),
+//     cancel: null, // If a custom title bar is set, the widget(title/confirm/cancel) will not be displayed when the value is null
+//   ),
+// );
+
+
+DatePicker.showDatePicker(
+      context,
+      onMonthChangeStartWithFirstDate: true,
+      pickerTheme: DateTimePickerTheme(
+        showTitle: true,
+        confirm: Text('确定', style: TextStyle(color: Colors.red)),
+        cancel: Text('取消', style: TextStyle(color: Colors.orange)),
+      ),
+      minDateTime: DateTime.parse(MIN_DATETIME),
+      maxDateTime: DateTime.parse(MAX_DATETIME),
+      initialDateTime: DateTime.now(),
+      // dateFormat:"yyyy-MMMM-dd",
+      dateFormat:"yyyy年M月d日 EEE,H时:m分",
+      pickerMode: DateTimePickerMode.datetime,//配置时分
+      locale: DateTimePickerLocale.zh_cn,
+      onClose: () => print("----- onClose -----"),
+      onCancel: () => print('onCancel'),
+      onChange: (dateTime, List<int> index) {
+        // setState(() {
+        //   _dateTime = dateTime;
+        // });
+        //print('dateTime');
+      },
+      onConfirm: (dateTime, List<int> index) {
+        // setState(() {
+        //   _dateTime = dateTime;
+        // });
+
+         print('----$dateTime---');
+      },
+    );
+  
+   
+
+ }
+
+  _showTimerPicker() {
+    showTimePicker(
+            context: context,
+            initialTime: TimeOfDay(hour: 12, minute: 40)) //初始化时间
+        .then((result) =>
+            {print("RaisedButton== 点击按钮跳转 ${result.format(context)}")});
   }
 
   _showDatePicker() async {
-
     // showDatePicker(
     //   context: context,
     //   initialDate: _nowDate,
@@ -112,24 +161,18 @@ class _HomePageAppState extends State<HomePageApp> {
     // }).catchError((err) {
     //   print(err);
     // });
-    
 
-
-     var result =  await  showDatePicker(
+    var result = await showDatePicker(
       context: context,
       initialDate: _nowDate,
       firstDate: DateTime(1980), // 减 30 天
       lastDate: DateTime(2100), // 加 30 天
     );
 
- 
-
-
-       setState(() {
-          this._nowDate =  result;
-      });
-   print("RaisedButton== 点击按钮跳转 $result");
-
+    setState(() {
+      this._nowDate = result;
+    });
+    print("RaisedButton== 点击按钮跳转 $result");
   }
 
   // DateTime _dateTime=DateTime.now();
@@ -204,21 +247,24 @@ class _HomePageAppState extends State<HomePageApp> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text("${formatDate(_nowDate, [yyyy, '年', mm, '月', dd, '日'])}"),
+                  Text(
+                      "${formatDate(_nowDate, [yyyy, '年', mm, '月', dd, '日'])}"),
                   Icon(Icons.arrow_drop_down)
                 ],
               ),
               onTap: _showDatePicker),
-
-         InkWell(
+          InkWell(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text("18.08"),
-                  Icon(Icons.arrow_drop_down)
-                ],
+                children: <Widget>[Text("18.08"), Icon(Icons.arrow_drop_down)],
               ),
-              onTap: _showTimerPicker),     
+              onTap: _showTimerPicker),
+          InkWell(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[Text("第三方时间组件"), Icon(Icons.arrow_drop_down)],
+              ),
+              onTap: _cupertinoTimerPicker),
         ],
       ),
     );

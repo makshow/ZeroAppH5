@@ -31,6 +31,10 @@ dependencies:
   cupertino_icons: ^0.1.3
   date_format: ^1.0.8
   flutter_cupertino_date_picker: ^1.0.26+2
+  flutter_swiper: ^1.1.6
+  fluttertoast: ^4.0.0
+  http: ^0.12.1
+  dio: ^3.0.9
 dev_dependencies:
   flutter_test:
     sdk: flutter

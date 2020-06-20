@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'listData.dart';
 import './tabBar/routes/Routes.dart';
-
+import 'package:flutter_localizations/flutter_localizations.dart';
 /** flutter 项目快捷键 
  *  flutter run运行项目  flutter run -d emulator-5554 
  *  shift+ R键 点击热加载 flutter run -d  E631C902-5A60-48D7-86D1-3EDF30568D51 
@@ -14,6 +14,8 @@ import './tabBar/routes/Routes.dart';
  *  ./emulator -avd Pixel_3_API_28 -dns-server 8.8.8.8,114.114.114.114
  *  flutter 项目创建  flutter create -i objc  flutteroc
  *  字母0切换iOS和android模式
+ * 
+ *   手动安装包  flutter packages get
  */
 void main() {
   runApp(new CityShopApp());
@@ -28,6 +30,11 @@ class CityShopApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //国际语言包
+      localizationsDelegates:[GlobalMaterialLocalizations.delegate,GlobalWidgetsLocalizations.delegate],
+      supportedLocales: [const Locale('zh', 'CH')],
+
+      debugShowCheckedModeBanner: false,//关闭显示debug模式
       //home: BottomNavigationWidget(),
       initialRoute: '/' ,//初始化加载路由
       theme: ThemeData(

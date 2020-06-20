@@ -15,7 +15,7 @@ class Search extends StatelessWidget {
         centerTitle: true, //标题居中显示
       ),
       body: Text('搜索页面'),
-      floatingActionButton:FloatingActionButton(
+      floatingActionButton:FloatingActionButton(//凸起按钮
         child:Text('返回'),
         onPressed: (){
             Navigator.of(context).pop();

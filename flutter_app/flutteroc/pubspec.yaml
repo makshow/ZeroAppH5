@@ -20,13 +20,15 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.7.0 <3.0.0"
 
+# 配置上线版本第三方库文件依赖  
 dependencies:
   flutter:
     sdk: flutter
 
-  # 配置第三方库文件依赖
-  cupertino_icons: ^0.1.3
 
+  cupertino_icons: ^0.1.3
+  dio: ^3.0.9
+# 配置开发版本第三方库文件依赖   
 dev_dependencies:
   flutter_test:
     sdk: flutter

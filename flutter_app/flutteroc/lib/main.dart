@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import './pages/IndexPage.dart';
 /** flutter 项目快捷键 
  *  flutter run运行项目  flutter run -d emulator-5554 
  *  shift+ R键 点击热加载 flutter run -d  E631C902-5A60-48D7-86D1-3EDF30568D51 
@@ -11,84 +11,37 @@ import 'package:flutter/material.dart';
  *  ./emulator -avd Pixel_3_API_28 -dns-server 8.8.8.8,114.114.114.114
  *  flutter 项目创建  flutter create -i objc  flutteroc
  *  字母0切换iOS和android模式
- * 
  *   手动安装包  flutter packages get
  */
 
 
+
 void main() {
-  runApp(MyApp());
+   
+     runApp(MyApp());
 }
 
+
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  
+  //06.Dio基础_Get请求和动态组件协作
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       debugShowCheckedModeBanner: false,//关闭显示debug模式
-      title: 'Flutter Demo',
+      //title: '百姓生活家+',
+      
       theme: ThemeData(
-        primarySwatch: Colors.orange,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        // primarySwatch: Colors.orange,  目前的主题颜色(primarySwatch)只有固定色值
+        // visualDensity: VisualDensity.adaptivePlatformDensity,
+        primaryColor:Colors.pink
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: IndexPages(),
+
     );
   }
+
+
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
- 
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    
-    return Scaffold(
-      appBar: AppBar(
-     
-        title: Text(widget.title),
-      ),
-      
-      body: Center(
-        
-        child: Column(
-          
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            )
-          ]
-        )
-      ),
-
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ) // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}

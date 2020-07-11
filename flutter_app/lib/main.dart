@@ -3,13 +3,15 @@ import 'package:flutter/material.dart';
 import 'listData.dart';
 import './tabBar/routes/Routes.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
+
 /** flutter 项目快捷键 
  *  flutter run运行项目  flutter run -d emulator-5554 
  *  shift+ R键 点击热加载 flutter run -d  E631C902-5A60-48D7-86D1-3EDF30568D51 
  *  P键 切换网格,查看布局使用
  *  O键 切换android和iOS的预览模式
  *  Q键 退出调试模式
- *  解决android模拟器无法链接网络
+ *  解决android模拟器无法链接网络 ./emulator -avd Pixel_3a_XL_API -dns-server 8.8.8.8,114.114.114.114
  *  cd /Users/smellzero/Library/Android/sdk/emulator
  *  ./emulator -avd Pixel_3_API_28 -dns-server 8.8.8.8,114.114.114.114
  *  flutter 项目创建  flutter create -i objc  flutteroc
@@ -18,9 +20,12 @@ import 'package:flutter_localizations/flutter_localizations.dart';
  *   手动安装包  flutter packages get
  */
 void main() {
-  runApp(new CityShopApp());
 
+  runApp(new CityShopApp());
+  
 }
+
+
 
 /**Flutter StatelessWidget 无状态组件  StatefulWidget有状态组件 */
 class CityShopApp extends StatelessWidget {

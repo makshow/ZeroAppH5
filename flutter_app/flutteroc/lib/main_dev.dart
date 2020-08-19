@@ -14,8 +14,7 @@ class MyApp extends StatelessWidget {
   //06.Dio基础_Get请求和动态组件协作
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: MaterialApp(
+    return MaterialApp(
 
       debugShowCheckedModeBanner: false,//关闭显示debug模式
       //title: '百姓生活家+',
@@ -27,7 +26,6 @@ class MyApp extends StatelessWidget {
       ),
       home: IndexPages(),
 
-     ),
     );
   }
 

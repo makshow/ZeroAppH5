@@ -71,7 +71,10 @@ class _IndexPagesState extends State<IndexPages> {
         },
         ),
 
-      body: this.currentPage,
+      body: IndexedStack(//保存页面状态组件
+            index: currentIndex,
+            children: pages
+          ),
     
     );
   }

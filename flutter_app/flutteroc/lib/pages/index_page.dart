@@ -38,7 +38,7 @@ class _IndexPagesState extends State<IndexPages> {
 
   final List <Widget>  pages = [
       HomePage(title: '百姓生活+'),
-      CatergoryPage(),
+      CatergoryPage(title: '商品分类'),
       ShopCart(),
       MemberPage()
   ];

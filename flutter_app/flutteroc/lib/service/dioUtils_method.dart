@@ -132,9 +132,10 @@ class DioUtils {
   static Dio createInstance() {
     if (dio == null) {
       /// 全局属性：请求前缀、连接超时时间、响应超时时间
+     // BaseOptions、Options、RequestOptions 都可以配置参数，优先级别依次递增，且可以根据优先级别覆盖参数 
       var options = BaseOptions(
         connectTimeout: CONNECT_TIMEOUT,
-        receiveTimeout: RECEIVE_TIMEOUT,
+        receiveTimeout: RECEIVE_TIMEOUT,// 响应流上前后两次接受到数据的间隔，单位为毫秒。
         responseType: ResponseType.plain,
         contentType: "application/x-www-form-urlencoded",
         validateStatus: (status) {

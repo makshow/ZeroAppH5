@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03072DAA24ECF70B00ED787A /* liburl_launcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03072DA924ECF70B00ED787A /* liburl_launcher.a */; };
+		0359366A24FBB1DB0072687F /* libfluttertoast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0359366924FBB1DB0072687F /* libfluttertoast.a */; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		9567E05793BED46160A1D9F0 /* libPods-Runner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC11A2F5B99B24C786B11A8 /* libPods-Runner.a */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		03072DA924ECF70B00ED787A /* liburl_launcher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liburl_launcher.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0359366924FBB1DB0072687F /* libfluttertoast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libfluttertoast.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		31BF3E0662DB72EA774F29E8 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0359366A24FBB1DB0072687F /* libfluttertoast.a in Frameworks */,
 				03072DAA24ECF70B00ED787A /* liburl_launcher.a in Frameworks */,
 				9567E05793BED46160A1D9F0 /* libPods-Runner.a in Frameworks */,
 			);
@@ -133,6 +136,7 @@
 		B3DE878C0F32456BCE2C7A85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0359366924FBB1DB0072687F /* libfluttertoast.a */,
 				03072DA924ECF70B00ED787A /* liburl_launcher.a */,
 				EBC11A2F5B99B24C786B11A8 /* libPods-Runner.a */,
 			);

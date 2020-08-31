@@ -71,11 +71,25 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "3.0.9"
+  fluro:
+    dependency: "direct main"
+    description:
+      name: fluro
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.6.3"
   flutter:
     dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_easyrefresh:
+    dependency: "direct main"
+    description:
+      name: flutter_easyrefresh
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.1.5"
   flutter_page_indicator:
     dependency: transitive
     description:
@@ -107,6 +121,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  fluttertoast:
+    dependency: "direct main"
+    description:
+      name: fluttertoast
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "7.0.4"
   http_parser:
     dependency: transitive
     description:
@@ -160,6 +181,13 @@ packages:
     dependency: transitive
     description:
       name: plugin_platform_interface
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.2"
+  provide:
+    dependency: "direct main"
+    description:
+      name: provide
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.0.2"

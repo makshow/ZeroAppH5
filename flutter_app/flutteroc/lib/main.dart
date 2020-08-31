@@ -1,11 +1,24 @@
 import 'package:flutter/material.dart';
 import 'pages/index_page.dart';
+import 'package:provide/provide.dart';
+import './provide/child_category.dart';
+import './provide/category_goods_list.dart';
 
-
-
+//配置路由文件引用
+import 'package:fluro/fluro.dart';
+import './router/routes.dart';
+import './router/application.dart';
 void main() {
    
-     runApp(MyApp());
+  var childCategory = ChildCategory();
+  var categoryGoodsListProvide= CategoryGoodsListProvide();
+  var providers     = Providers();
+ 
+  providers
+    ..provide(Provider<ChildCategory>.value(childCategory))
+    ..provide(Provider<CategoryGoodsListProvide>.value(categoryGoodsListProvide));
+
+  runApp(ProviderNode(child:MyApp(),providers:providers));
 }
 
 
@@ -14,10 +27,16 @@ class MyApp extends StatelessWidget {
   //06.Dio基础_Get请求和动态组件协作
   @override
   Widget build(BuildContext context) {
+
+    final router = Router();
+    Routes.configureRoutes(router);
+    Application.router=router;
+
     return Container(
       child: MaterialApp(
 
       debugShowCheckedModeBanner: false,//关闭显示debug模式
+      onGenerateRoute: Application.router.generator,//配置路由引用
       //title: '百姓生活家+',
       
       theme: ThemeData(

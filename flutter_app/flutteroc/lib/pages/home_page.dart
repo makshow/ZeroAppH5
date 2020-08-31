@@ -1,11 +1,13 @@
 import 'dart:convert';
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import "package:flutter/cupertino.dart"; //iOS系统风格
-import 'package:flutteroc/service/service_method.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart'; //屏幕适配
 import 'package:url_launcher/url_launcher.dart';
 import "package:flutteroc/service/dioUtils_method.dart";
+import 'package:flutter_easyrefresh/easy_refresh.dart';
+import 'package:flutteroc/router/application.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title = "首页"}) : super(key: key);
@@ -17,6 +19,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage>
     with AutomaticKeepAliveClientMixin {
+  int page = 1;
+  List<Map> hotGoodsList = [];
+
   @override
   bool get wantKeepAlive => true;
 
@@ -24,16 +29,6 @@ class _HomePageState extends State<HomePage>
   void initState() {
     super.initState();
     print("生命周期第四步调用initState方法");
-
-    // DioUtils.requestWithMetodUrl(
-    //   homePageContent,
-    //   parameters: {'lon': '115.02932', 'lat': '35.76189'},
-    //   method:"post",
-
-    // ).then((value) {
-
-    //    print("生命周期============${value}");
-    // });
   }
 
   @override
@@ -77,21 +72,51 @@ class _HomePageState extends State<HomePage>
               List<Map> floor3 =
                   (data['data']['floor3'] as List).cast(); //楼层1商品和图片
 
-              return ListView(
-                children: <Widget>[
-                  SwiperDiy(swiperDataList: swiperDataList), //页面顶部轮播组件
-                  TopNavigator(navigatorList: navigatorList), //导航组件
-                  AdBanner(advertesPicture: advertesPicture), //广告组件
-                  LeaderPhone(
-                      leaderImage: leaderImage, leaderPhone: leaderPhone),
-                  Recommend(recommendList: recommendList),
-                  FloorTitle(picture_address: floor1Title), //楼层标题
-                  FloorContent(floorGoodsList: floor1), //楼层商品组件
-                  FloorTitle(picture_address: floor2Title),
-                  FloorContent(floorGoodsList: floor2),
-                  FloorTitle(picture_address: floor3Title),
-                  FloorContent(floorGoodsList: floor3),
-                ],
+              return EasyRefresh(
+                footer: ClassicalFooter(
+                    bgColor: Colors.white,
+                    textColor: Colors.pink,
+                    infoColor: Colors.pink,
+                    showInfo: true,
+                    noMoreText: '',
+                    infoText: '加载中',
+                    loadReadyText: '上拉加载....'),
+                child: ListView(
+                  children: <Widget>[
+                    SwiperDiy(swiperDataList: swiperDataList), //页面顶部轮播组件
+                    TopNavigator(navigatorList: navigatorList), //导航组件
+                    AdBanner(advertesPicture: advertesPicture), //广告组件
+                    LeaderPhone(
+                        leaderImage: leaderImage, leaderPhone: leaderPhone),
+                    Recommend(recommendList: recommendList),
+                    FloorTitle(picture_address: floor1Title), //楼层标题
+                    FloorContent(floorGoodsList: floor1), //楼层商品组件
+                    FloorTitle(picture_address: floor2Title),
+                    FloorContent(floorGoodsList: floor2),
+                    FloorTitle(picture_address: floor3Title),
+                    FloorContent(floorGoodsList: floor3),
+                    _hotGoods(),
+                  ],
+                ),
+                onRefresh: () async {},
+                onLoad: () async {
+                  var parameters = {"page": page};
+
+                  await DioUtils.requestWithMetodUrl(
+                    homePageBelowConten,
+                    parameters: parameters,
+                    method: "post",
+                  ).then((value) {
+                    var data = json.decode(value.toString());
+                    List<Map> newGoodsList = (data['data'] as List).cast();
+                    setState(() {
+                      hotGoodsList.addAll(newGoodsList);
+                      page++;
+                    });
+
+                    print("取火爆专题接口数据============${newGoodsList}");
+                  });
+                },
               );
             } else {
               return Center(
@@ -104,6 +129,101 @@ class _HomePageState extends State<HomePage>
             }
           },
         ));
+  }
+
+  //申明获取火爆专题接口数据方法
+  void _getHotGoods() {
+    var parameters = {"page": page};
+
+    DioUtils.requestWithMetodUrl(
+      homePageBelowConten,
+      parameters: parameters,
+      method: "post",
+    ).then((value) {
+      var data = json.decode(value.toString());
+      List<Map> newGoodsList = (data['data'] as List).cast();
+      setState(() {
+        hotGoodsList.addAll(newGoodsList);
+        page++;
+      });
+
+      print("取火爆专题接口数据============${newGoodsList}");
+    });
+  }
+
+  //火爆专区标题
+  Widget hotTitle = Container(
+    margin: EdgeInsets.only(top: 10.0),
+    padding: EdgeInsets.all(5.0),
+    alignment: Alignment.center,
+    decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border(bottom: BorderSide(width: 0.5, color: Colors.black12))),
+    child: Text('火爆专区'),
+  );
+
+  //火爆专区子项
+  Widget _wrapList() {
+    if (hotGoodsList.length != 0) {
+      List<Widget> listWidget = hotGoodsList.map((val) {
+        return InkWell(
+            onTap: () {
+              Application.router
+                  .navigateTo(context, "/detail?id=${val['goodsId']}", transition: TransitionType.fadeIn);
+            
+            },
+            child: Container(
+              width: ScreenUtil().setWidth(372),
+              color: Colors.white,
+              padding: EdgeInsets.all(5.0),
+              margin: EdgeInsets.only(bottom: 3.0),
+              child: Column(
+                children: <Widget>[
+                  Image.network(
+                    val['image'],
+                    width: ScreenUtil().setWidth(375),
+                  ),
+                  Text(
+                    val['name'],
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                        color: Colors.pink, fontSize: ScreenUtil().setSp(26)),
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Text('￥${val['mallPrice']}'),
+                      Text(
+                        '￥${val['price']}',
+                        style: TextStyle(
+                            color: Colors.black26,
+                            decoration: TextDecoration.lineThrough), //价格横线显示样式
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ));
+      }).toList();
+
+      return Wrap(
+        spacing: 2, //返回几列显示
+        children: listWidget, //加载子组件
+      );
+    } else {
+      return Text(' ');
+    }
+  }
+
+  //火爆专区组合
+  Widget _hotGoods() {
+    return Container(
+        child: Column(
+      children: <Widget>[
+        hotTitle,
+        _wrapList(),
+      ],
+    ));
   }
 }
 
@@ -126,7 +246,7 @@ class SwiperDiy extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return InkWell(
             onTap: () {
-              //  Application.router.navigateTo(context,"/detail?id=${swiperDataList[index]['goodsId']}");
+              Application.router.navigateTo(context,"/detail?id=${swiperDataList[index]['goodsId']}",transition: TransitionType.cupertino);
             },
             child: Image.network("${swiperDataList[index]['image']}",
                 fit: BoxFit.fill),
@@ -183,7 +303,7 @@ class TopNavigator extends StatelessWidget {
       height: ScreenUtil().setHeight(320),
       padding: EdgeInsets.all(3.0),
       child: GridView.count(
-        physics: NeverScrollableScrollPhysics(),
+        physics: NeverScrollableScrollPhysics(),//禁止回弹
         crossAxisCount: 5,
         padding: EdgeInsets.all(4.0),
         children: navigatorList.map((item) {
@@ -283,7 +403,7 @@ class Recommend extends StatelessWidget {
   Widget _item(index, context) {
     return InkWell(
       onTap: () {
-        // Application.router.navigateTo(context,"/detail?id=${recommendList[index]['goodsId']}");
+         Application.router.navigateTo(context,"/detail?id=${recommendList[index]['goodsId']}");
       },
       child: Container(
         width: ScreenUtil().setWidth(280),

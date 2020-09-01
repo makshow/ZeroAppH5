@@ -15,6 +15,7 @@
 		0373BA2324FD446900EA4D04 /* libscreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0373BA2224FD446900EA4D04 /* libscreen.a */; };
 		03F1D0DA24FE2F9B006936AB /* libsqflite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F1D0D924FE2F9B006936AB /* libsqflite.a */; };
 		03F1D0DC24FE2FD5006936AB /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F1D0DB24FE2FD5006936AB /* libFMDB.a */; };
+		03F6EC8824FE45F0006218E8 /* libshared_preferences.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F6EC8724FE45F0006218E8 /* libshared_preferences.a */; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		9567E05793BED46160A1D9F0 /* libPods-Runner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC11A2F5B99B24C786B11A8 /* libPods-Runner.a */; };
@@ -49,6 +50,7 @@
 		03DCF54124FD3F340098F9EF /* libshared_preferences.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libshared_preferences.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F1D0D924FE2F9B006936AB /* libsqflite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libsqflite.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F1D0DB24FE2FD5006936AB /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		03F6EC8724FE45F0006218E8 /* libshared_preferences.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libshared_preferences.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		31BF3E0662DB72EA774F29E8 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F6EC8824FE45F0006218E8 /* libshared_preferences.a in Frameworks */,
 				03F1D0DC24FE2FD5006936AB /* libFMDB.a in Frameworks */,
 				03F1D0DA24FE2F9B006936AB /* libsqflite.a in Frameworks */,
 				0373BA2324FD446900EA4D04 /* libscreen.a in Frameworks */,
@@ -156,6 +159,7 @@
 		B3DE878C0F32456BCE2C7A85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03F6EC8724FE45F0006218E8 /* libshared_preferences.a */,
 				03F1D0DB24FE2FD5006936AB /* libFMDB.a */,
 				03F1D0D924FE2F9B006936AB /* libsqflite.a */,
 				0373BA2224FD446900EA4D04 /* libscreen.a */,
@@ -417,7 +421,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.peopleslife.sports;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peopleslife.lives;
 				PRODUCT_NAME = "百姓生活+";
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -551,7 +555,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.peopleslife.sports;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peopleslife.lives;
 				PRODUCT_NAME = "百姓生活+";
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -580,7 +584,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.peopleslife.sports;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peopleslife.lives;
 				PRODUCT_NAME = "百姓生活+";
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";

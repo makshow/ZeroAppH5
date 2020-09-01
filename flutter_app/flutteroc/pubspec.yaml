@@ -37,7 +37,8 @@ dependencies:
   fluro: ^1.6.3
   flutter_html: ^1.0.0
   sqflite: ^1.1.5
-  
+  shared_preferences: ^0.5.1
+    
 # 配置开发版本第三方库文件依赖   
 dev_dependencies:
   flutter_test:

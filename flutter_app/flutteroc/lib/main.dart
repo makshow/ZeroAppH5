@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
 import 'pages/index_page.dart';
+
 import 'package:provide/provide.dart';
 import './provide/child_category.dart';
 import './provide/category_goods_list.dart';
+import './provide/details_info.dart';
 
 //配置路由文件引用
 import 'package:fluro/fluro.dart';
 import './router/routes.dart';
 import './router/application.dart';
 void main() {
-   
+
+  var detailsInfoProvide = DetailsInfoProvide();  
   var childCategory = ChildCategory();
   var categoryGoodsListProvide= CategoryGoodsListProvide();
   var providers     = Providers();
  
   providers
+    ..provide(Provider<DetailsInfoProvide>.value(detailsInfoProvide))
     ..provide(Provider<ChildCategory>.value(childCategory))
     ..provide(Provider<CategoryGoodsListProvide>.value(categoryGoodsListProvide));
 

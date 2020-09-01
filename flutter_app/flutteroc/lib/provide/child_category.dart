@@ -36,7 +36,7 @@ class ChildCategory with ChangeNotifier{
     }
 
    //改变子类索引
-    changeChildIndex(int index,String id){
+    changeChildIndex(String id,int index){
     
        childIndex=index;
        //子类标签切换加载数据时,page = 1 noMoreText = "" subId=id

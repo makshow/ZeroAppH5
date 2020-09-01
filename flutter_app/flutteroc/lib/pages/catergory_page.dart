@@ -233,7 +233,7 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
       onTap: () {
         print("rightInkWell点击数据============${item.mallSubName}");
         Provide.value<ChildCategory>(context)
-            .changeChildIndex(index, item.mallSubId);
+            .changeChildIndex(item.mallSubId,index);
         _getRightGoodsList(item.mallSubId);
       },
       child: Container(
@@ -269,7 +269,9 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
     return Provide<CategoryGoodsListProvide>(builder: (context, child, data) {
       try {
         if (Provide.value<ChildCategory>(context).page == 1) {
-          scrollController.jumpTo(0.0);
+          if (scrollController.hasClients) {
+              scrollController.jumpTo(0.0);
+          }
         }
       } catch (e) {
         print('进入页面第一次初始化：${e}');

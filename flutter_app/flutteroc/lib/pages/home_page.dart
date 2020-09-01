@@ -9,6 +9,11 @@ import "package:flutteroc/service/dioUtils_method.dart";
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutteroc/router/application.dart';
 
+
+// import 'package:provide/provide.dart';
+// import '../provide/child_category.dart';
+// import '../model/category.dart';
+
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title = "首页"}) : super(key: key);
   final String title;
@@ -268,8 +273,8 @@ class TopNavigator extends StatelessWidget {
     // print('------------------${item}');
     return InkWell(
       onTap: () {
-        // _goCategory(context,index,item['mallCategoryId']);
-        print('------------------');
+        //_goCategory(context,index,item['mallCategoryId']);
+        print('------------------${item}');
       },
       child: Column(
         children: <Widget>[
@@ -280,16 +285,17 @@ class TopNavigator extends StatelessWidget {
     );
   }
 
-  // void _goCategory(context,int index,String categroyId) async {
-  //   await request('getCategory').then((val) {
-  //     var data = json.decode(val.toString());
-  //     CategoryModel category = CategoryModel.fromJson(data);
-  //     List   list = category.data;
-  //     Provide.value<ChildCategory>(context).changeCategory(categroyId,index);
-  //     Provide.value<ChildCategory>(context).getChildCategory( list[index].bxMallSubDto,categroyId);
-  //     Provide.value<CurrentIndexProvide>(context).changeIndex(1);
-  //   });
-  // }
+  void _goCategory(context,int index,String categroyId) async {
+    // await request('getCategory').then((val) {
+    //   var data = json.decode(val.toString());
+    //   CategoryModel category = CategoryModel.fromJson(data);
+    //   List   list = category.data;
+    //   Provide.value<ChildCategory>(context).changeCategory(categroyId,index);
+    //   Provide.value<ChildCategory>(context).getChildCategory( list[index].bxMallSubDto,categroyId);
+    //   Provide.value<CurrentIndexProvide>(context).changeIndex(1);
+    // });
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -403,7 +409,7 @@ class Recommend extends StatelessWidget {
   Widget _item(index, context) {
     return InkWell(
       onTap: () {
-         Application.router.navigateTo(context,"/detail?id=${recommendList[index]['goodsId']}");
+         Application.router.navigateTo(context,"/detail?id=${recommendList[index]['goodsId']}",transition: TransitionType.cupertino);
       },
       child: Container(
         width: ScreenUtil().setWidth(280),
@@ -485,7 +491,7 @@ class FloorContent extends StatelessWidget {
       width: ScreenUtil().setWidth(375),
       child: InkWell(
         onTap: () {
-          //Application.router.navigateTo(context, "/detail?id=${goods['goodsId']}");
+          Application.router.navigateTo(context, "/detail?id=${goods['goodsId']}",transition: TransitionType.cupertino);
         },
         child: Image.network(goods['image']),
       ),

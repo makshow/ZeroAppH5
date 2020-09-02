@@ -8,7 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 import "package:flutteroc/service/dioUtils_method.dart";
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutteroc/router/application.dart';
-
+import 'package:flutter/services.dart';
 
 // import 'package:provide/provide.dart';
 // import '../provide/child_category.dart';
@@ -25,7 +25,38 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage>
     with AutomaticKeepAliveClientMixin {
   int page = 1;
-  List<Map> hotGoodsList = [];
+  List<Map> hotGoodsList = [{"title":"极光推送"}];
+  List  swiper = [
+    
+     {
+        "link":"http://zt.cjwsc.com/zt/all_page/shuangdan20171221/index.html",
+        "image":"http://static.cjwsc.com//image/76/78/b4/7678b4ebf83bf5a8922db318078c891b.jpg"
+      },
+      {
+        "link":"http://zt.cjwsc.com/zt/all_page/KONKA1222/index.html",
+        "image":"http://static.cjwsc.com//image/b4/a7/1b/b4a71ba0c3b3c2e5428a63351081f2a3.jpg"
+      },
+      {
+        "link":"http://zt.cjwsc.com/zt/all_page/supor1225/index.html",
+        "image":"http://static.cjwsc.com//image/fc/85/fd/fc85fd9480f1c86e16d9378759dfceb1.jpg"
+      },
+      {
+        "link":"http://zt.cjwsc.com/zt/all_page/nuanxinjh1218/index.html",
+        "image":"http://static.cjwsc.com//image/66/aa/ba/66aabaa6063e4519ab4c204d5d6839de.jpg"
+      },
+      {
+        "link":"http://zt.cjwsc.com/zt/all_page/weiyds1222_m/index.html",
+        "image":"http://static.cjwsc.com//image/b4/df/80/b4df80a514173af881ff0d67dcc4a05a.jpg"
+      },
+      {
+        "link":"http://zt.cjwsc.com/zt/20171212/2_jinzhish/index.html",
+        "image":"http://static.cjwsc.com//image/47/3b/58/473b58449ebacecacacef7b5dc10a130.jpg"
+      },
+      {
+        "link":"http://zt.cjwsc.com/zt/2017nianhuojie/main/nianhj-main-m.html",
+        "image":"http://static.cjwsc.com//image/30/22/d5/3022d5c7aa51e376e21cf7a16aedf973.jpg"
+      }
+  ];
 
   @override
   bool get wantKeepAlive => true;
@@ -33,7 +64,13 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
-    print("生命周期第四步调用initState方法");
+    
+
+    rootBundle.loadString('assets/data.json').then((value){
+        
+        var data =  json.decode(value);
+        print("读取本地json数据---$data");
+    });
   }
 
   @override
@@ -123,7 +160,16 @@ class _HomePageState extends State<HomePage>
                   });
                 },
               );
-            } else {
+            } else if(swiper.length>0){
+               
+                  return  ListView(
+                     children: [
+                         SwiperDiy(swiperDataList:swiper), //页面顶部轮播组件
+                     ],
+                  );
+                  
+
+            }else {
               return Center(
                 child: Text('加载中',
                     style: TextStyle(

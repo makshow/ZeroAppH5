@@ -33,7 +33,7 @@ class _DataBaseTestState extends State<DataBaseTest> {
   void insertData() async {
     await dbTools.open();
     Map<String, Object> par = Map<String, Object>();
-     par['uid'] = Random().nextInt(10);
+    par['uid'] = Random().nextInt(10);
     par['fuid'] = Random().nextInt(10);
     par['type'] = Random().nextInt(2);
 

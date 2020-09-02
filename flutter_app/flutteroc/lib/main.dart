@@ -10,14 +10,20 @@ import './provide/details_info.dart';
 import 'package:fluro/fluro.dart';
 import './router/routes.dart';
 import './router/application.dart';
+import './provide/cart.dart';
+import './provide/currentIndex.dart';
 void main() {
 
+  var currentIndexProvide  =CurrentIndexProvide();
+  var cartProvide  =CartProvide();
   var detailsInfoProvide = DetailsInfoProvide();  
   var childCategory = ChildCategory();
   var categoryGoodsListProvide= CategoryGoodsListProvide();
   var providers     = Providers();
  
   providers
+    ..provide(Provider<CurrentIndexProvide>.value(currentIndexProvide))
+    ..provide(Provider<CartProvide>.value(cartProvide))
     ..provide(Provider<DetailsInfoProvide>.value(detailsInfoProvide))
     ..provide(Provider<ChildCategory>.value(childCategory))
     ..provide(Provider<CategoryGoodsListProvide>.value(categoryGoodsListProvide));

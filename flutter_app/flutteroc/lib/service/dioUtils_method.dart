@@ -24,6 +24,7 @@ class DioUtils {
 
   /// default options
   static const String API_PREFIX = 'http://v.jspang.com:8088/baixing/';
+  //static const String API_PREFIX = 'http://test.baixingliangfan.cn/baixing/';
   static const int CONNECT_TIMEOUT = 10000;
   static const int RECEIVE_TIMEOUT = 10000;
 

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:provide/provide.dart';
+import '../provide/cart.dart';
+import './cart_page/cart_item.dart';
+import './cart_page/cart_bottom.dart';
 
 class ShopCart extends StatefulWidget {
   ShopCart({Key key, this.title = "购物车"}) : super(key: key);
@@ -10,10 +13,7 @@ class ShopCart extends StatefulWidget {
 }
 
 class _ShopCartState extends State<ShopCart> {
-  List<String> data = ["购物车","购物车2"];
-
-
-
+  List<String> data = [];
 
   @override
   Widget build(BuildContext context) {
@@ -22,24 +22,43 @@ class _ShopCartState extends State<ShopCart> {
         title: Text(widget.title),
         centerTitle: true, //标题居中显示
       ),
-      body: Column(
-        children: <Widget>[
-          Container(
-              height: 300,
-              child: ListView.builder(
-                itemCount: data.length,
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text(data[index]),
-                  );
-                },
-              )),
-         
-    
-        ],
-      ),
+      body: FutureBuilder(
+          future: _getCartInfo(context),
+          builder: (context, snapshot) {
+            List cartList = Provide.value<CartProvide>(context).cartList;
+            if (snapshot.hasData && cartList != null) {
+              return Stack(
+                children: [
+                  Provide<CartProvide>(
+                      builder: (context, child, childCategory) {
+                    cartList = Provide.value<CartProvide>(context).cartList;
+                    return ListView.builder(
+                      itemCount: cartList.length,
+                      itemBuilder: (context, index) {
+                        return CartItem(cartList[index]);
+                      },
+                    );
+                  }),
+                  Provide<CartProvide>(
+                      builder: (context, child, childCategory) {
+                    cartList = Provide.value<CartProvide>(context).cartList;
+                    return Positioned(
+                      bottom: 0,
+                      left: 0,
+                      child: cartList.length > 0 ? CartBottom() : Text(' '),
+                    );
+                  }),
+                ],
+              );
+            } else {
+              return Text('正在加载');
+            }
+          }),
     );
   }
+
+  Future<String> _getCartInfo(BuildContext context) async {
+    await Provide.value<CartProvide>(context).getCartInfo();
+    return 'end';
+  }
 }
-
-

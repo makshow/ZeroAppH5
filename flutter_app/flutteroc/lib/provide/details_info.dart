@@ -24,7 +24,7 @@ class DetailsInfoProvide with ChangeNotifier{
         goodsInfo=DetailsModel.fromJson(responseData);
         notifyListeners();
 
-        print("从后台获取商品详情接口数据============${responseData}");
+        //print("从后台获取商品详情接口数据============${responseData}");
       });
 
   }

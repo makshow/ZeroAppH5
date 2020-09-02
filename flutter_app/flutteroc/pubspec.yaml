@@ -20,7 +20,21 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.7.0 <3.0.0"
 
-# 配置上线版本第三方库文件依赖  
+# 配置上线版本第三方库文件依赖
+# cupertino_icons,IOS风格的控件
+# dio Flutter的网络请求库,dio是一个强大的Dart Http请求库，支持Restful API、FormData、拦截器、请求取消、Cookie管理、文件上传/下载、超时、自定义适配器等.
+# flutter_swiper Flutter的轮播插件
+# flutter_screenutil,屏幕适配方案，让你的UI在不同尺寸的屏幕上都能显示合理的布局!
+# url_launcher支持调用底层的拨打电话、发送邮件、发送信息以及打开网址和打开第三方应用等等
+# flutter_easyrefresh它支持几乎所有的Flutter控件,EasyRefresh很容易就能在Flutter应用上实现下拉刷新以及上拉加载操作
+# provide状态管理,全局数据调用
+# fluttertoast,弹出toast吐司
+# fluro路由管理,使用fluro管理路由
+# flutter_html,Flutter加载HTML标签或者网页自动适配加载
+# sqflite是一款轻量级的关系型数据库,类似SQLite
+# shared_preferences,在用SharedPreferences这个轻量级的存储类来保存键值对信息,iOS底层实现使用NSUserDefaults
+
+
 dependencies:
   flutter:
     sdk: flutter

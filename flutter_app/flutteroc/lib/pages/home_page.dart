@@ -79,6 +79,7 @@ class _HomePageState extends State<HomePage>
         appBar: AppBar(
           title: Text(widget.title),
           centerTitle: true, //标题居中显示
+          
         ),
         body: FutureBuilder(
           future: DioUtils.requestWithMetodUrl(

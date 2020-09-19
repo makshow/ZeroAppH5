@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'pages/index_page.dart';
 
 import 'package:provide/provide.dart';//Provider
@@ -13,6 +16,7 @@ import './router/application.dart';
 import './provide/cart.dart';
 import './provide/currentIndex.dart';
 void main() {
+  
 
   var currentIndexProvide  =CurrentIndexProvide();
   var cartProvide  =CartProvide();
@@ -29,6 +33,22 @@ void main() {
     ..provide(Provider<CategoryGoodsListProvide>.value(categoryGoodsListProvide));
 
   runApp(ProviderNode(child:MyApp(),providers:providers));
+  
+    if (Platform.isAndroid) {
+    SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(
+
+       //这是设置状态栏的图标和字体的颜色  
+       statusBarColor: Colors.pink,
+      ///Brightness.light  一般都是显示为白色
+      ///Brightness.dark 一般都是显示为黑色
+       statusBarIconBrightness: Brightness.dark
+    );
+    SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+
+    print("systemUiOverlayStyle");
+  }
+  
+
 }
 
 

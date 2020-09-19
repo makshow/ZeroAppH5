@@ -14,6 +14,7 @@ class _MemberPageState extends State<MemberPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('会员中心'),
+        centerTitle: true, //标题居中显示
       ),
       body: ListView(
         children: <Widget>[
@@ -32,7 +33,7 @@ class _MemberPageState extends State<MemberPage> {
     return Container(
       width: ScreenUtil().setWidth(750),
       padding: EdgeInsets.all(20),
-      color: Colors.pinkAccent,
+      color: Colors.purple,
       child: Column(
         children: <Widget>[
           Container(

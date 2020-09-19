@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'pages/index_page.dart';
 
-import 'package:provide/provide.dart';
+import 'package:provide/provide.dart';//Provider
 import './provide/child_category.dart';
 import './provide/category_goods_list.dart';
 import './provide/details_info.dart';
@@ -47,18 +47,19 @@ class MyApp extends StatelessWidget {
 
       debugShowCheckedModeBanner: false,//关闭显示debug模式
       onGenerateRoute: Application.router.generator,//配置路由引用
-      //title: '百姓生活家+',
+      title: '百姓生活家+',
       
       theme: ThemeData(
         // primarySwatch: Colors.orange,  目前的主题颜色(primarySwatch)只有固定色值
         // visualDensity: VisualDensity.adaptivePlatformDensity,
         primaryColor:Colors.pink
       ),
-      home: IndexPages(),
-
+       home: IndexPages(),
      ),
     );
   }
+
+
 
 
 }

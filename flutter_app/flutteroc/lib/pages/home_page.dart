@@ -9,7 +9,7 @@ import "package:flutteroc/service/dioUtils_method.dart";
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutteroc/router/application.dart';
 import 'package:flutter/services.dart';
-
+//flutter create -i objc  flutteroc 构建新项目
 // import 'package:provide/provide.dart';
 // import '../provide/child_category.dart';
 // import '../model/category.dart';

@@ -8,6 +8,10 @@ const getCategory = 'wxmini/getCategory'; //商品类别信息
 const getMallGoods = 'wxmini/getMallGoods'; //商品分类的商品列表
 const getGoodDetailById = 'wxmini/getGoodDetailById'; //商品详细信息列表
 
+const  homeBanner_URL =  "https://portal-web.cjwsc.com/home/topBanner.action" ;//首页轮播广告图 
+const  homeHotCommendGoods_URL ="https://portal-web.cjwsc.com/home/hotRecommend.action";//首页热卖推荐
+// 首页商品列表  NSDictionary *dic = @{@"size":@"50", @"page":page};
+const  homeGoodsList_URL = 'http://apiv2.yangkeduo.com/v2/goods';
 /*
  * 封装 restful 请求
  * GET、POST、DELETE、PATCH

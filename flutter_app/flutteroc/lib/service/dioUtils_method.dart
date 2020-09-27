@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'dart:async';
-
-const serviceUrl = 'http://v.jspang.com:8088/baixing/';
+//http://v.jspang.com:8088/baixing/wxmini/homePageContent
+const serviceUrl = 'http://v.jspang.com:8088/baixing/';//wxmini/homePageContent
 const homePageContent = 'wxmini/homePageContent'; // 商家首页信息
 const homePageBelowConten = 'wxmini/homePageBelowConten'; //商城首页热卖商品拉取
 const getCategory = 'wxmini/getCategory'; //商品类别信息

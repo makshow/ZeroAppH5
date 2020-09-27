@@ -1,0 +1,356 @@
+{
+    "status": 200,
+    "message": "Success!",
+    "code": "0",
+    "suggestMsg": "",
+    "timestamp": "1600700608893",
+    "data": {
+        "lists": [
+            {
+                "productList": [
+                    {
+                        "name": "威力洗衣机8KG XQB80-1699J",
+                        "pic": "http://static.cjwsc.com//image/1e/e8/00/1ee800cf65dc700d29e9cbfc231c1a5e.jpg",
+                        "previewShowTime": null,
+                        "price": "1199",
+                        "price_on_tag": "1599",
+                        "sale": "820",
+                        "stockNumberLimit": null,
+                        "stockNumberLimitSale": null,
+                        "stock_num": "35"
+                    },
+                    {
+                        "pic": "https://t00img.yangkeduo.com/goods/images/2020-08-03/1f9664526d9cf1e9272e4accd83f6fe2.jpeg",
+                        "name": "美的1.5匹智弧新三级能效变频自清洁挂机空调KFR-35GW",
+                        "previewShowTime": null,
+                        "price": "2780",
+                        "price_on_tag": "3280",
+                        "sale": "884",
+                        "stockNumberLimit": null,
+                        "stockNumberLimitSale": null,
+                        "stock_num": "1799"
+                    },
+                    {
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-26/f5c08adf08af51e7ed4b30a9ca8040ab.jpg",
+                        "name": "绞肉机家用电动多功能厨房馅绞机不锈钢搅拌器绞菜机",
+                        "previewShowTime": null,
+                        "price": "2780",
+                        "price_on_tag": "3280",
+                        "sale": "884",
+                        "stockNumberLimit": null,
+                        "stockNumberLimitSale": null,
+                        "stock_num": "1799"
+                    },
+                    {
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-07-30/f5fd8730dfdd78be6be915cb2ac0b25d.jpg",
+                        "name": "电煮锅迷你电热家用炒菜小火锅电炒锅电蒸锅煮面泡面锅",
+                        "previewShowTime": null,
+                        "price": "2780",
+                        "price_on_tag": "3280",
+                        "sale": "884",
+                        "stockNumberLimit": null,
+                        "stockNumberLimitSale": null,
+                        "stock_num": "1799"
+                    },
+                    {
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-09-01/ab14497135b952d49d026d793baf3f98.jpg",
+                        "name": "Haier/海尔冰箱三门风冷无霜大容量家用小型电冰箱BCD-216WMPT",
+                        "previewShowTime": null,
+                        "price": "2780",
+                        "price_on_tag": "3280",
+                        "sale": "884",
+                        "stockNumberLimit": null,
+                        "stockNumberLimitSale": null,
+                        "stock_num": "1799"
+                    },
+                    {
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-09-01/347e270953d73e9a6e219a0359bbd93b.jpg",
+                        "name": "海尔冰箱四开门406升风冷无霜变频超薄十字对开门冰箱BCD-406WDPD",
+                        "previewShowTime": null,
+                        "price": "2780",
+                        "price_on_tag": "3280",
+                        "sale": "884",
+                        "stockNumberLimit": null,
+                        "stockNumberLimitSale": null,
+                        "stock_num": "1799"
+                    },
+                    {
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-25/8010aeccb35b10fbc8d66d4689adb246.jpg",
+                        "name": "【好厨娘】电煮锅迷你电炒锅家用多功能电热锅学生宿舍锅泡面神器",
+                        "previewShowTime": null,
+                        "price": "2780",
+                        "price_on_tag": "3280",
+                        "sale": "884",
+                        "stockNumberLimit": null,
+                        "stockNumberLimitSale": null,
+                        "stock_num": "1799"
+                    }
+                ],
+                "tabName": "生活电器"
+            },
+            {
+                "productList": [
+                    {
+                        "name": "华为NOVA7",
+                        "pic": "https://upload-images.jianshu.io/upload_images/1419035-206fcfd8ee0e0789.jpg",
+                        "previewShowTime": null,
+                        "price": "69",
+                        "price_on_tag": "199",
+                        "sale": "731",
+                        "stockNumberLimit": null,
+                        "stockNumberLimitSale": null,
+                        "stock_num": "494"
+                    },
+                    {
+                        "name": "HUAWEIP40Pro",
+                        "pic": "https://upload-images.jianshu.io/upload_images/1419035-8defbc802d0218cb.jpg",
+                        "previewShowTime": null,
+                        "price": "69",
+                        "price_on_tag": "199",
+                        "sale": "731",
+                        "stockNumberLimit": null,
+                        "stockNumberLimitSale": null,
+                        "stock_num": "494"
+                    },
+                    {
+                        "name": "iPhone11 Pro",
+                        "pic": "https://upload-images.jianshu.io/upload_images/1419035-3ac644d6574aa0b6.jpg",
+                        "previewShowTime": null,
+                        "price": "69",
+                        "price_on_tag": "199",
+                        "sale": "731",
+                        "stockNumberLimit": null,
+                        "stockNumberLimitSale": null,
+                        "stock_num": "494"
+                    },
+                    {
+                        "name": "iPhone11 ProMax",
+                        "pic": "https://upload-images.jianshu.io/upload_images/1419035-b0634203fd4d4074.jpg",
+                        "previewShowTime": null,
+                        "price": "69",
+                        "price_on_tag": "199",
+                        "sale": "731",
+                        "stockNumberLimit": null,
+                        "stockNumberLimitSale": null,
+                        "stock_num": "494"
+                    },
+                    {
+                        "name": "HUAWEIP40",
+                        "pic": "https://upload-images.jianshu.io/upload_images/1419035-7d7d936583840dbc.jpg",
+                        "previewShowTime": null,
+                        "price": "69",
+                        "price_on_tag": "199",
+                        "sale": "731",
+                        "stockNumberLimit": null,
+                        "stockNumberLimitSale": null,
+                        "stock_num": "494"
+                    },
+                    {
+                        "name": "iPhone11 Pro(A2217)",
+                        "pic": "https://upload-images.jianshu.io/upload_images/1419035-190af89c91a36198.jpg",
+                        "previewShowTime": null,
+                        "price": "69",
+                        "price_on_tag": "199",
+                        "sale": "731",
+                        "stockNumberLimit": null,
+                        "stockNumberLimitSale": null,
+                        "stock_num": "494"
+                    },
+                    {
+                        "name": "iPhone11 (A2223)64GB",
+                        "pic": "https://upload-images.jianshu.io/upload_images/1419035-f3c35fe07d1162c9.jpg",
+                        "previewShowTime": null,
+                        "price": "69",
+                        "price_on_tag": "199",
+                        "sale": "731",
+                        "stockNumberLimit": null,
+                        "stockNumberLimitSale": null,
+                        "stock_num": "494"
+                    }
+                ],
+                "tabName": "手机通讯"
+            },
+            {
+                "productList": [
+                    {
+                        "name": "德铂（Debo）德国特维尔 套刀不锈钢套装刀具3件套DEP-216 菜刀 多功能刀 剪刀",
+                        "pic": "http://image.cjwsc.com/goods/67/1050600162167/1050600162167001/240_240/200_2001_20180001.jpg"
+                    },
+                    {
+                        "name": "美厨（maxcook）304不锈钢碗 汤碗双层隔热 餐具面碗13CM（6只装）MCWA612",
+                        "pic": "http://image.cjwsc.com/goods/31/1050800173231/1050800173231001/240_240/200_2001_20180001.jpg"
+                    }
+                ],
+                "tabName": "日用家居"
+            },
+            {
+                "productList": [
+                    {
+                        "discountEndTime": "0",
+                        "discountPrice": "246",
+                        "name": "VIPLIFE家纺 精梳全棉四件套床单被套清新田园风-海棠花语-100027",
+                        "pic": "http://image.cjwsc.com/goods/75/1050100162675/1050100162675001/240_240/200_2001_20180001.jpg"
+                    },
+                    {
+                        "discountEndTime": "0",
+                        "discountPrice": "246",
+                        "name": "风扇罩防尘罩全包落地扇电风扇罩子立式收纳落地式保护罩防灰套子",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-20/6f9306b4e2897c80251fd8ebc057ee38.jpg"
+                    },
+                    {
+                        "discountEndTime": "0",
+                        "discountPrice": "246",
+                        "name": "100%亲肤床上四件套床单被套加厚磨毛单双人床上用品",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-24/6f393358057eef8e65b032422dba545d.jpg"
+                    },
+                    {
+                        "discountEndTime": "0",
+                        "discountPrice": "246",
+                        "name": "秋冬加厚全棉老粗布床单双人床单单件纯棉床单单人被单枕套炕单",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-12/a1699b375fd60b84c3bb50fab02b262e.jpg"
+                    },
+                    {
+                        "discountEndTime": "0",
+                        "discountPrice": "246",
+                        "name": "酒店枕头枕芯一对装可水洗婚庆成人学生单人枕头芯家用助眠护颈枕",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-27/570b0942ebc0b177e4809db02c9ff031.jpg"
+                    },
+                    {
+                        "discountEndTime": "0",
+                        "discountPrice": "246",
+                        "name": "可水洗枕头枕芯一对家用酒店护颈枕单人学生成人枕头芯一对送枕套",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-06-27/60d543b71ba5ecf23f353e4303ac226c.jpg"
+                    }
+                ],
+                "tabName": "精品家纺"
+            },
+            {
+                "productList": [
+                    {
+                        "name": "2020夏季女装新款短袖女连衣裙V领印花长裙修身显瘦韩版大摆裙",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-06-30/6690b693ef273bedf1e212a1ea9a1ec1.jpg"
+                    },
+                    {
+                        "name": "含棉2020夏装新款文艺大码女装减龄印花休闲套装上衣+裤子两件套",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-05-07/4f794cac64cc8737ac43725554ac5aa4.jpg"
+                    },
+                    {
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-10/e6d9a2a0f97260e9ad5e4c113b7d185d.jpg",
+                        "name": "羊绒衫女100%纯羊绒"
+                    },
+                    {
+                        "pic": "http://commimg.pddpic.com/img_check/2020-09-26/701bbdecd184dca62937861b61ebd273.jpg",
+                        "name": "时尚妈妈牛仔裤"
+                    },
+                    {
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-06-09/80ec4dd29872ff1f18b30ce13ed0fe14.jpg",
+                        "name": "连衣裙女夏裙子套装两件套"
+                    },
+                    {
+                        "pic": "http://commimg.pddpic.com/img_check/2020-09-26/6c4f9abb9f782d3d5c2ed9c5ffdd78c7.jpg",
+                        "name": "2020款秋t恤小衫"
+                    },
+                    {
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-09-01/7dfa911f3ce48f5c5443eb1136d120db.jpg",
+                        "name": "南极人男鞋秋季透气鞋子男韩版潮流高帮鞋男士休闲鞋运动鞋男冬季"
+                    },
+                    {
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-07-03/f67cb0e8b9da79e7d2cf4f8f5bd4e017.jpg",
+                        "name": "啄木鸟夏季男士纯色丝光棉短袖T恤休闲纯棉翻领体恤POLO衫半袖衣"
+                    },
+                    {
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-04/381acc51935347e1e3ef257f985734bd.jpg",
+                        "name": "正品苹果牛仔裤男宽松直筒商务大码休闲裤秋冬季修身弹力长裤子男"
+                    },
+                    {
+                        "name": "韩版行李箱女拉杆箱男学生旅行箱万向轮皮箱子大容量密码箱铝框款",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-17/2d7ae4c4da6c0bf83df5fa6cf7acaf27.jpg"
+                    },
+                    {
+                        "name": "2020年新短款紫色棉服棉衣棉袄女韩版宽松羽绒学生面包服冬季外套",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-23/0c068fb6cd4c6b1d86005af88cf9c287.jpg"
+                    },
+                    {
+                        "name": "全牛皮军靴男冬季保暖棉靴羊毛棉鞋男士防滑加厚爸爸鞋真皮雪地靴",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-18/5c9741d81811d356952ed3eb703d135c.jpg"
+                    },
+                    {
+                        "name": "老北京布鞋女鞋飞织四季新款透气防臭防滑低帮妈妈鞋舒适运动鞋",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-25/3598f5e27d2d7669584a667113c81455.jpg"
+                    },
+                    {
+                        "name": "【特价硬箱】行李箱男女学生拉杆箱旅行箱密码箱登机箱多规格可选",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-05/70bb739a6371545be157a42088187a8a.jpg"
+                    },
+                    {
+                        "name": "2020年新款春秋韩版洋气蕾丝女装上衣中老年妈妈气质小西装外套女",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-27/90fec5610a3a23e313bc2a483c54c470.jpg"
+                    }
+                ],
+                "tabName": "服饰鞋包"
+            },
+            {
+                "productList": [
+                    {
+                        "name": "风扇罩防尘罩全包落地扇电风扇罩子立式收纳落地式保护罩防灰套子",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-20/6f9306b4e2897c80251fd8ebc057ee38.jpg"
+                    },
+                    {
+                        "name": "【抢30片】去抬头纹贴额头纹川字纹紧致抗皱额贴眉间贴祛皱面膜贴",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-29/cf4ba20c3995f51e59b4a398908fead7.jpg"
+                    },
+                    {
+                        "name": "100%亲肤床上四件套床单被套加厚磨毛单双人床上用品",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-24/6f393358057eef8e65b032422dba545d.jpg"
+                    },
+                    {
+                        "name": "巴布豆小学生书包男女童1-3-4-5年级护脊儿童双肩背包6-12岁轻便8",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-18/5fb905dd1fec42ab116c28835f5a9337.jpg"
+                    },
+                    {
+                        "name": "保温菜罩饭菜餐桌防尘罩子盖剩菜加热家用新款冬季保暖加厚可折叠",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-18/debbc4beb6e1209b5cd0e2da9c220223.jpg"
+                    },
+                    {
+                        "name": "韩版行李箱女拉杆箱男学生旅行箱万向轮皮箱子大容量密码箱铝框款",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-17/2d7ae4c4da6c0bf83df5fa6cf7acaf27.jpg"
+                    },
+                    {
+                        "name": "【萌度格】秋冬文艺大码女连衣拼接碎花气质过膝连身裙假两件长袖",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-28/e4fa2fc27e2e0e96e3af18007f05620f.jpg"
+                    },
+                    {
+                        "name": "【可穿式百变浴巾】成人浴袍柔软比纯棉吸水睡衣女加厚吊带扣浴裙",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-18/6bde715ea4a8e74d9f527fb049c0aebf.jpg"
+                    },
+                    {
+                        "name": "秋冬加厚全棉老粗布床单双人床单单件纯棉床单单人被单枕套炕单",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-12/a1699b375fd60b84c3bb50fab02b262e.jpg"
+                    },
+                    {
+                        "name": "睿跑手扶智能平衡车双轮电动体感平衡儿童成人平衡车抖音同款热卖",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-07-16/71db2b1f1fd6b8872e987333e833f7df.jpg"
+                    },
+                    {
+                        "name": "酒店枕头枕芯一对装可水洗婚庆成人学生单人枕头芯家用助眠护颈枕",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-27/570b0942ebc0b177e4809db02c9ff031.jpg"
+                    },
+                    {
+                        "name": "2020年新短款紫色棉服棉衣棉袄女韩版宽松羽绒学生面包服冬季外套",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-23/0c068fb6cd4c6b1d86005af88cf9c287.jpg"
+                    },
+                    {
+                        "name": "全牛皮军靴男冬季保暖棉靴羊毛棉鞋男士防滑加厚爸爸鞋真皮雪地靴",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-08-18/5c9741d81811d356952ed3eb703d135c.jpg"
+                    },
+                    {
+                        "name": "网红同款棉被收纳袋大号整理袋衣服打包袋搬家用衣物行李袋防尘袋",
+                        "pic": "http://t16img.yangkeduo.com/img_check/2020-07-28/7b6490670858d1119a131866c0423de8.jpg"
+                    }
+                ],
+                "tabName": "更多推荐"
+            }
+        ]
+    },
+    "error": null
+}
